@@ -1,0 +1,36 @@
+WarName,StartYear,EndYear,TotalDeaths,MilitaryDeaths,CivilianDeaths,Region,Type
+World War II,1939,1945,70000000,25000000,45000000,Global,Interstate
+World War I,1914,1918,17000000,10000000,7000000,Europe,Interstate
+Second Sino-Japanese War,1937,1945,20000000,15000000,5000000,Asia,Interstate
+Russian Civil War,1917,1922,9000000,2000000,7000000,Europe,Civil War
+Chinese Civil War,1927,1949,8000000,5000000,3000000,Asia,Civil War
+Korean War,1950,1953,3000000,1200000,1800000,Asia,Interstate
+Vietnam War,1955,1975,3500000,1500000,2000000,Asia,Interstate
+Bangladesh Liberation War,1971,1971,3000000,500000,2500000,Asia,Civil War
+Second Congo War,1998,2003,5400000,500000,4900000,Africa,Civil War
+Nigerian Civil War,1967,1970,2000000,500000,1500000,Africa,Civil War
+Cambodian Genocide,1975,1979,2000000,300000,1700000,Asia,Civil War
+Partition of India,1947,1947,2000000,500000,1500000,Asia,Civil War
+Afghan Civil War,1978,1992,1500000,800000,700000,Asia,Civil War
+Soviet-Afghan War,1979,1989,1500000,500000,1000000,Asia,Interstate
+Ethiopian Civil War,1974,1991,1400000,400000,1000000,Africa,Civil War
+Mozambican Civil War,1977,1992,1000000,700000,300000,Africa,Civil War
+Iran-Iraq War,1980,1988,1000000,700000,300000,Middle East,Interstate
+Mexican Revolution,1910,1920,1000000,700000,300000,Americas,Civil War
+Russian Revolution,1917,1923,1500000,800000,700000,Europe,Civil War
+Spanish Civil War,1936,1939,500000,400000,100000,Europe,Civil War
+Rwandan Genocide,1994,1994,800000,100000,700000,Africa,Civil War
+Syrian Civil War,2011,2023,600000,200000,400000,Middle East,Civil War
+Iraq War,2003,2011,500000,200000,300000,Middle East,Interstate
+Angolan Civil War,1975,2002,500000,300000,200000,Africa,Civil War
+Somali Civil War,1991,2009,500000,300000,200000,Africa,Civil War
+War in Darfur,2003,2020,400000,100000,300000,Africa,Civil War
+Algerian War,1954,1962,400000,300000,100000,Africa,Colonial
+Yemen Civil War,2014,2023,377000,100000,277000,Middle East,Civil War
+Libyan Civil War,2011,2020,30000,20000,10000,Africa,Civil War
+Afghanistan War,2001,2021,200000,100000,100000,Asia,Interstate
+Chechen Wars,1994,2009,150000,80000,70000,Europe,Civil War
+Lebanese Civil War,1975,1990,150000,100000,50000,Middle East,Civil War
+Philippine-American War,1899,1902,220000,200000,20000,Asia,Colonial
+Bosnian War,1992,1995,100000,80000,20000,Europe,Civil War
+Sri Lankan Civil War,1983,2009,100000,80000,20000,Asia,Civil War

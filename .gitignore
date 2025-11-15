@@ -1,0 +1,8 @@
+# Ignore text and markdown files per user request
+*.txt
+*.md
+
+# Common ignores
+node_modules/
+.DS_Store
+.env

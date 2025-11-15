@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Human Cost of War - A Data Story</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav id="nav">
+            <div class="nav-content">
+                <h1 class="nav-title">The Human Cost of War</h1>
+                <div class="nav-links">
+                    <a href="#intro">Introduction</a>
+                    <a href="#timeline">Timeline</a>
+                    <a href="#map">Geography</a>
+                    <a href="#accumulation">Accumulation</a>
+                    <a href="#sankey">Impact</a>
+                    <a href="#ranking">Rankings</a>
+                    <a href="#conclusion">Conclusion</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Introduction Section -->
+        <section id="intro" class="section intro-section">
+            <div class="content-wrapper">
+                <h1 class="main-title">The Human Cost of War</h1>
+                <p class="subtitle">Exploring the devastating toll of armed conflict throughout history</p>
+                <div class="intro-text">
+                    <p>
+                        Throughout human history, warfare has claimed hundreds of millions of lives. 
+                        From ancient conquests to modern conflicts, the human cost of war has been staggering.
+                    </p>
+                    <p>
+                        This data story explores how the nature of warfare has evolved over centuries, 
+                        examining patterns in casualty rates, the changing ratio of military versus civilian deaths, 
+                        and how technological advances have paradoxically made conflicts both more efficient and more lethal.
+                    </p>
+                    <p class="question">
+                        <strong>Have wars become deadlier over time? Who bears the greatest burden?</strong>
+                    </p>
+                </div>
+                <div class="scroll-indicator">↓ Scroll to explore</div>
+            </div>
+        </section>
+
+        <!-- Timeline Visualization - Full Overview -->
+        <section id="timeline" class="section">
+            <div class="content-wrapper">
+                <h2>When Did Wars Happen?</h2>
+                <p class="section-description">
+                    This timeline shows major conflicts throughout history. Notice the concentration of deaths 
+                    between 1900-1980. Circle sizes represent total deaths.
+                </p>
+                <div id="timeline-viz" class="visualization"></div>
+                <div id="timeline-controls" class="controls">
+                    <label>
+                        <input type="checkbox" id="scale-toggle"> Use logarithmic scale
+                    </label>
+                </div>
+                <div class="insight-box">
+                    <p><strong>Key Observation:</strong> The 20th century (1900-2000) accounts for over 50% of all war deaths in recorded history, 
+                    with World War I and World War II alone causing 87 million deaths.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transition Section -->
+        <section id="transition" class="section" style="background: linear-gradient(to bottom, #ecf0f1, #2c3e50); color: white;">
+            <div class="content-wrapper" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="color: white; font-size: 3rem;">The Deadliest Century</h2>
+                <p style="font-size: 1.3rem; line-height: 1.8; margin: 2rem 0;">
+                    Between 1900 and 1980, the world witnessed unprecedented levels of organized violence. 
+                    Let's zoom into this period and examine these conflicts more closely.
+                </p>
+                <div class="scroll-indicator" style="color: rgba(255,255,255,0.7);">↓ Continue scrolling</div>
+            </div>
+        </section>
+
+        <!-- Timeline Visualization - Zoomed 20th Century -->
+        <section id="timeline-zoom" class="section">
+            <div class="content-wrapper">
+                <h2>The 20th Century: 1900-1980</h2>
+                <p class="section-description">
+                    A closer look at the most deadly period in human history. This zoomed view reveals 
+                    the devastating impact of World Wars, civil wars, and genocides.
+                </p>
+                <div id="timeline-zoom-viz" class="visualization"></div>
+                <div id="zoom-controls" class="controls">
+                    <button class="filter-btn active" data-period="all">Full View (700-2025)</button>
+                    <button class="filter-btn" data-period="20th">20th Century (1900-2000)</button>
+                    <button class="filter-btn" data-period="world-wars">World Wars (1914-1945)</button>
+                    <button class="filter-btn" data-period="cold-war">Cold War Era (1945-1991)</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Visualization -->
+        <section id="map" class="section">
+            <div class="content-wrapper">
+                <h2>Where Did Wars Occur?</h2>
+                <p class="section-description">
+                    This map shows the geographic distribution of conflicts. Circle sizes represent death tolls. 
+                    Hover to see details, click to filter other visualizations.
+                </p>
+                <div id="map-viz" class="visualization"></div>
+                <div id="map-legend" class="legend"></div>
+            </div>
+        </section>
+
+        <!-- Area Chart Visualization -->
+        <section id="accumulation" class="section">
+            <div class="content-wrapper">
+                <h2>How Deaths Accumulated Over Time</h2>
+                <p class="section-description">
+                    This stacked area chart shows the cumulative death toll across centuries, 
+                    revealing both quiet periods and sudden surges in mortality.
+                </p>
+                <div id="area-viz" class="visualization"></div>
+                <div id="time-slider-container">
+                    <label for="time-slider">Time Period:</label>
+                    <input type="range" id="time-slider" min="700" max="2025" value="2025">
+                    <span id="time-display">700 - 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sankey Visualization -->
+        <section id="sankey" class="section">
+            <div class="content-wrapper">
+                <h2>Who Pays the Price?</h2>
+                <p class="section-description">
+                    This innovative Sankey diagram shows the flow from conflict types to casualty types, 
+                    revealing how the burden of war has shifted from military to civilian populations.
+                </p>
+                <div id="sankey-viz" class="visualization"></div>
+                <div class="insight-box">
+                    <p><strong>Key Insight:</strong> In modern conflicts, civilian casualties have increased 
+                    proportionally, representing a significant shift in the nature of warfare.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bar Chart Visualization -->
+        <section id="ranking" class="section">
+            <div class="content-wrapper">
+                <h2>Deadliest Conflicts in History</h2>
+                <p class="section-description">
+                    This ranking shows the conflicts with the highest death tolls. 
+                    Click on any bar to explore that conflict in detail.
+                </p>
+                <div id="bar-viz" class="visualization"></div>
+                <div id="conflict-filters" class="controls">
+                    <label>Filter by type:</label>
+                    <button class="filter-btn active" data-type="all">All</button>
+                    <button class="filter-btn" data-type="Interstate">Interstate</button>
+                    <button class="filter-btn" data-type="Civil War">Civil War</button>
+                    <button class="filter-btn" data-type="Colonial">Colonial</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="section conclusion-section">
+            <div class="content-wrapper">
+                <h2>Key Takeaways</h2>
+                <div class="takeaways">
+                    <div class="takeaway">
+                        <h3>1. Concentration in Key Eras</h3>
+                        <p>A few periods in history account for the vast majority of war deaths, 
+                        particularly the World Wars of the 20th century.</p>
+                    </div>
+                    <div class="takeaway">
+                        <h3>2. Shifting Burden</h3>
+                        <p>The civilian share of casualties has increased dramatically in modern conflicts, 
+                        representing a fundamental change in warfare.</p>
+                    </div>
+                    <div class="takeaway">
+                        <h3>3. Geographic Patterns</h3>
+                        <p>Certain regions experience recurring conflict hotspots, with patterns that 
+                        transcend time periods and regime types.</p>
+                    </div>
+                </div>
+                <div class="data-sources">
+                    <h3>Data Sources</h3>
+                    <ul>
+                        <li><a href="https://ourworldindata.org/war-and-peace" target="_blank">Our World in Data - War and Peace Dataset</a></li>
+                        <li><a href="https://correlatesofwar.org/data-sets/cow-war/" target="_blank">Correlates of War (CoW) Project</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/List_of_wars_by_death_toll" target="_blank">Wikipedia - List of Wars by Death Toll</a></li>
+                    </ul>
+                    <p class="disclaimer">
+                        <strong>Note:</strong> Historical casualty estimates vary significantly between sources. 
+                        This visualization uses median estimates where available and acknowledges the uncertainty 
+                        inherent in historical data collection.
+                    </p>
+                </div>
+                <button id="reset-btn" class="reset-button">Reset All Filters</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Load visualization scripts -->
+    <script src="src/data-loader.js"></script>
+    <script src="src/filters.js"></script>
+    <script src="visualizations/timeline-enhanced.js"></script>
+    <script src="visualizations/map.js"></script>
+    <script src="visualizations/area-chart.js"></script>
+    <script src="visualizations/sankey.js"></script>
+    <script src="visualizations/bar-chart.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>

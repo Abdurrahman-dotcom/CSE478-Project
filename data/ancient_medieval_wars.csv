@@ -1,0 +1,31 @@
+WarName,StartYear,EndYear,TotalDeaths,MilitaryDeaths,CivilianDeaths,Region,Type
+Three Kingdoms War,184,280,36000000,10000000,26000000,Asia,Civil War
+An Lushan Rebellion,755,763,36000000,10000000,26000000,Asia,Civil War
+Mongol Conquests,1206,1368,40000000,15000000,25000000,Asia,Colonial
+Taiping Rebellion,1850,1864,30000000,10000000,20000000,Asia,Civil War
+Fall of Ming Dynasty,1616,1662,25000000,7000000,18000000,Asia,Civil War
+Timur's Conquests,1370,1405,17000000,5000000,12000000,Asia,Interstate
+Dungan Revolt,1862,1877,12000000,3000000,9000000,Asia,Civil War
+Warring States Period,475 BC,221 BC,10000000,8000000,2000000,Asia,Interstate
+Lushan Rebellion,755,763,36000000,10000000,26000000,Asia,Civil War
+Yellow Turban Rebellion,184,205,7000000,2000000,5000000,Asia,Civil War
+Byzantine-Arab Wars,634,750,1000000,700000,300000,Middle East,Interstate
+Crusades,1095,1291,3000000,2000000,1000000,Middle East,Interstate
+Hundred Years War,1337,1453,3000000,2000000,1000000,Europe,Interstate
+Thirty Years War,1618,1648,8000000,2000000,6000000,Europe,Interstate
+Wars of the Roses,1455,1487,105000,85000,20000,Europe,Civil War
+English Civil War,1642,1651,190000,150000,40000,Europe,Civil War
+Gallic Wars,58 BC,50 BC,1000000,800000,200000,Europe,Interstate
+Jewish-Roman Wars,66,135,1350000,350000,1000000,Middle East,Interstate
+Peloponnesian War,431 BC,404 BC,200000,150000,50000,Europe,Interstate
+Persian Wars,499 BC,449 BC,300000,250000,50000,Middle East,Interstate
+Second Punic War,218 BC,201 BC,770000,570000,200000,Europe,Interstate
+Conquests of Alexander,336 BC,323 BC,750000,550000,200000,Middle East,Interstate
+Fall of Western Rome,376,476,1000000,500000,500000,Europe,Interstate
+Imjin War,1592,1598,1000000,500000,500000,Asia,Interstate
+Qing Conquest of Ming,1616,1683,25000000,7000000,18000000,Asia,Interstate
+White Lotus Rebellion,1796,1804,100000,50000,50000,Asia,Civil War
+Panthay Rebellion,1856,1873,1000000,300000,700000,Asia,Civil War
+Nien Rebellion,1851,1868,100000,50000,50000,Asia,Civil War
+Muslim Rebellions in China,1862,1877,12000000,3000000,9000000,Asia,Civil War
+Red Turban Rebellion,1351,1368,7000000,2000000,5000000,Asia,Civil War

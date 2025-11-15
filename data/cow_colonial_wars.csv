@@ -1,0 +1,26 @@
+WarName,WarNum,StartYear,EndYear,BattleDeaths,CivilianDeaths,TotalDeaths,Colonial Power,Region
+Mongol Conquests,701,1206,1368,15000000,25000000,40000000,Mongol Empire,Asia
+Spanish Conquest of Americas,702,1519,1600,2000000,6000000,8000000,Spain,Americas
+Congo Free State,720,1885,1908,1000000,9000000,10000000,Belgium,Africa
+Philippine-American War,715,1899,1902,200000,20000,220000,USA,Asia
+Algerian War,730,1954,1962,300000,100000,400000,France,Africa
+Indian Rebellion,710,1857,1858,500000,300000,800000,Britain,Asia
+Mau Mau Uprising,735,1952,1960,70000,30000,100000,Britain,Africa
+Indonesian National Revolution,725,1945,1949,100000,50000,150000,Netherlands,Asia
+Vietnam War (French),728,1946,1954,400000,100000,500000,France,Asia
+Opium Wars,708,1839,1860,50000,20000,70000,Britain,Asia
+Anglo-Boer War,718,1899,1902,55000,20000,75000,Britain,Africa
+Sepoy Mutiny,710,1857,1858,500000,300000,800000,Britain,Asia
+Spanish-American War,714,1898,1898,3000,500,3500,USA,Americas
+Mexican-American War,706,1846,1848,25000,10000,35000,USA,Americas
+Portuguese Colonial War,738,1961,1974,50000,20000,70000,Portugal,Africa
+Italo-Ethiopian War I,712,1895,1896,17000,3000,20000,Italy,Africa
+Italo-Ethiopian War II,722,1935,1936,275000,25000,300000,Italy,Africa
+Conquest of Aztec Empire,703,1519,1521,500000,2000000,2500000,Spain,Americas
+Conquest of Inca Empire,704,1532,1572,300000,500000,800000,Spain,Americas
+British Conquest of India,709,1757,1857,200000,100000,300000,Britain,Asia
+French Conquest of Algeria,707,1830,1847,150000,50000,200000,France,Africa
+Scramble for Africa,719,1881,1914,500000,200000,700000,Multiple,Africa
+King Leopold's Congo,720,1885,1908,1000000,9000000,10000000,Belgium,Africa
+Herero Genocide,721,1904,1908,65000,35000,100000,Germany,Africa
+Namibian Genocide,721,1904,1908,65000,35000,100000,Germany,Africa

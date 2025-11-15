@@ -1,0 +1,37 @@
+WarName,WarNum,StartYear,EndYear,BattleDeaths,CivilianDeaths,TotalDeaths,Region,Outcome
+Taiping Rebellion,501,1850,1864,10000000,20000000,30000000,Asia,Government Victory
+An Lushan Rebellion,502,755,763,10000000,26000000,36000000,Asia,Government Victory
+Chinese Civil War,520,1927,1949,5000000,3000000,8000000,Asia,Communist Victory
+Russian Civil War,515,1917,1922,2000000,7000000,9000000,Europe,Bolshevik Victory
+American Civil War,508,1861,1865,620000,130000,750000,Americas,Union Victory
+Spanish Civil War,540,1936,1939,400000,100000,500000,Europe,Nationalist Victory
+Nigerian Civil War,567,1967,1970,500000,1500000,2000000,Africa,Federal Victory
+Bangladesh Liberation War,568,1971,1971,500000,2500000,3000000,Asia,Bangladeshi Victory
+Lebanese Civil War,575,1975,1990,100000,50000,150000,Middle East,Treaty
+Sri Lankan Civil War,577,1983,2009,80000,20000,100000,Asia,Government Victory
+Ethiopian Civil War,580,1974,1991,400000,1000000,1400000,Africa,Rebel Victory
+Mozambican Civil War,582,1977,1992,700000,300000,1000000,Africa,Peace Treaty
+Angolan Civil War,583,1975,2002,300000,200000,500000,Africa,Government Victory
+Rwandan Genocide,590,1994,1994,100000,700000,800000,Africa,RPF Victory
+Second Congo War,595,1998,2003,500000,4900000,5400000,Africa,Peace Agreement
+Syrian Civil War,610,2011,2023,200000,400000,600000,Middle East,Ongoing
+Somali Civil War,588,1991,2009,300000,200000,500000,Africa,Ongoing
+Cambodian Civil War,570,1970,1975,200000,50000,250000,Asia,Khmer Rouge Victory
+Cambodian Genocide,571,1975,1979,300000,1700000,2000000,Asia,Vietnamese Invasion
+War in Darfur,605,2003,2020,100000,300000,400000,Africa,Ongoing
+Greek Civil War,545,1946,1949,108000,50000,158000,Europe,Government Victory
+Biafran War,567,1967,1970,500000,1500000,2000000,Africa,Federal Victory
+French Wars of Religion,503,1562,1598,1000000,2000000,3000000,Europe,Edict of Nantes
+English Civil War,504,1642,1651,150000,40000,190000,Europe,Parliamentary Victory
+Wars of the Roses,505,1455,1487,85000,20000,105000,Europe,Tudor Victory
+Dungan Revolt,509,1862,1877,3000000,9000000,12000000,Asia,Qing Victory
+Mexican Revolution,512,1910,1920,700000,300000,1000000,Americas,Constitutional Victory
+Partition of India,548,1947,1947,500000,1500000,2000000,Asia,Partition
+Algerian War,555,1954,1962,300000,100000,400000,Africa,Algerian Independence
+Bosnian War,592,1992,1995,80000,20000,100000,Europe,Dayton Agreement
+Chechen War I,594,1994,1996,50000,30000,80000,Europe,Chechen Victory
+Chechen War II,596,1999,2009,50000,20000,70000,Europe,Russian Victory
+Three Kingdoms War,506,184,280,30000000,6000000,36000000,Asia,Jin Victory
+Boxer Rebellion,510,1899,1901,70000,30000,100000,Asia,Foreign Victory
+Indian Rebellion,507,1857,1858,500000,300000,800000,Asia,British Victory
+Mau Mau Uprising,553,1952,1960,70000,30000,100000,Africa,British Victory
