@@ -1,0 +1,218 @@
+/* ===== SCROLLYTELLING STORY STYLES ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+}
+
+/* Fixed visualization container */
+#viz-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+#main-viz {
+    width: 100%;
+    height: 100%;
+}
+
+/* Scrolling story sections */
+#story-sections {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.story-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 60px;
+    pointer-events: none;
+}
+
+.story-section:first-child {
+    justify-content: center;
+}
+
+.story-section:last-child {
+    justify-content: center;
+    min-height: 120vh;
+    background: #0a0a0a;
+    position: relative;
+    z-index: 100;
+}
+
+.story-text {
+    max-width: 600px;
+    background: rgba(20, 20, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.story-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #b8b8b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.story-paragraph {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #d0d0d0;
+}
+
+.story-paragraph.large {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.story-paragraph strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.scroll-hint {
+    font-size: 1.1rem;
+    color: #888;
+    text-align: center;
+    margin-top: 40px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.explore-button {
+    margin-top: 40px;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white !important;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+    pointer-events: auto !important;
+    display: inline-block;
+    text-decoration: none !important;
+    z-index: 10000;
+    position: relative;
+}
+
+.explore-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(231, 76, 60, 0.5);
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+}
+
+.explore-button:active {
+    transform: translateY(-1px);
+}
+
+/* Timeline axis styling */
+.timeline-axis text {
+    fill: #888;
+    font-size: 14px;
+}
+
+.timeline-axis line,
+.timeline-axis path {
+    stroke: #444;
+    stroke-width: 2;
+}
+
+/* Circle animations */
+.war-circle,
+.military-circle,
+.civilian-circle {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.war-circle:hover,
+.military-circle:hover,
+.civilian-circle:hover {
+    filter: brightness(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .story-section {
+        padding: 0 30px;
+    }
+    
+    .story-text {
+        padding: 35px;
+    }
+    
+    .story-title {
+        font-size: 2.5rem;
+    }
+    
+    .story-paragraph {
+        font-size: 1.1rem;
+    }
+    
+    .story-paragraph.large {
+        font-size: 1.4rem;
+    }
+}
+
+/* Tooltip for circles */
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}

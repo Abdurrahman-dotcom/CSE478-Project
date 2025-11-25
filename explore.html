@@ -3,196 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who Are The Real Victims of War?</title>
-    <link rel="stylesheet" href="styles/story.css">
+    <title>The Human Cost of War - A Data Story</title>
+    <link rel="stylesheet" href="styles/main.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
 </head>
 <body>
     <div id="app">
-        <!-- Fixed Visualization Container -->
-        <div id="viz-container">
-            <svg id="main-viz"></svg>
-            <!-- Debug indicator -->
-            <div id="step-indicator" style="position: fixed; top: 20px; right: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; z-index: 1000;">
-                Step: <span id="current-step">0</span>
+        <!-- Navigation -->
+        <nav id="nav">
+            <div class="nav-content">
+                <h1 class="nav-title">The Human Cost of War</h1>
+                <div class="nav-links">
+                    <a href="#intro">Introduction</a>
+                    <a href="#timeline">Timeline</a>
+                    <a href="#map">Geography</a>
+                    <a href="#accumulation">Accumulation</a>
+                    <a href="#sankey">Impact</a>
+                    <a href="#ranking">Rankings</a>
+                    <a href="#conclusion">Conclusion</a>
+                </div>
             </div>
-        </div>
+        </nav>
 
-        <!-- Scrolling Story Sections -->
-        <div id="story-sections">
-            
-            <!-- Act 1: The Question -->
-            <section class="story-section" data-step="0">
-                <div class="story-text">
-                    <h1 class="story-title">Who Are The Real Victims of War?</h1>
-                    <p class="story-paragraph">
-                        Every statistic is a life. Every number, a story.
+        <!-- Introduction Section -->
+        <section id="intro" class="section intro-section">
+            <div class="content-wrapper">
+                <h1 class="main-title">The Human Cost of War</h1>
+                <p class="subtitle">Exploring the devastating toll of armed conflict throughout history</p>
+                <div class="intro-text">
+                    <p>
+                        Throughout human history, warfare has claimed hundreds of millions of lives. 
+                        From ancient conquests to modern conflicts, the human cost of war has been staggering.
                     </p>
-                    <p class="story-paragraph">
-                        Throughout history, hundreds of millions have perished in armed conflict.
-                        But who truly bears the burden?
+                    <p>
+                        This data story explores how the nature of warfare has evolved over centuries, 
+                        examining patterns in casualty rates, the changing ratio of military versus civilian deaths, 
+                        and how technological advances have paradoxically made conflicts both more efficient and more lethal.
                     </p>
-                    <div class="scroll-hint">↓ Scroll to discover</div>
-                </div>
-            </section>
-
-            <!-- Act 2: One Person -->
-            <section class="story-section" data-step="1">
-                <div class="story-text">
-                    <p class="story-paragraph large">
-                        This is one person.
-                    </p>
-                    <p class="story-paragraph">
-                        A life with hopes, dreams, and loved ones.
+                    <p class="question">
+                        <strong>Have wars become deadlier over time? Who bears the greatest burden?</strong>
                     </p>
                 </div>
-            </section>
-
-            <!-- Act 3: One Circle -->
-            <section class="story-section" data-step="2">
-                <div class="story-text">
-                    <p class="story-paragraph large">
-                        One circle.
-                    </p>
-                    <p class="story-paragraph">
-                        One life lost to war.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Act 4: Many Circles Emerge -->
-            <section class="story-section" data-step="3">
-                <div class="story-text">
-                    <p class="story-paragraph">
-                        But war has claimed far more than one.
-                    </p>
-                    <p class="story-paragraph large">
-                        Each circle represents a different conflict.
-                    </p>
-                    <p class="story-paragraph">
-                        The size shows how many died.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Act 5: Timeline Formation -->
-            <section class="story-section" data-step="4">
-                <div class="story-text">
-                    <p class="story-paragraph">
-                        When we arrange these by time, patterns emerge.
-                    </p>
-                    <p class="story-paragraph large">
-                        Some eras were far deadlier than others.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Act 6: Zoom to 1800-1970 -->
-            <section class="story-section" data-step="5">
-                <div class="story-text">
-                    <p class="story-paragraph">
-                        Look at 1800 to 1970.
-                    </p>
-                    <p class="story-paragraph large">
-                        In just 170 years, more died than in the previous 2,000.
-                    </p>
-                    <p class="story-paragraph">
-                        The industrial revolution made war efficient.
-                        <br/>Terrifyingly efficient.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Act 7: Break Apart into Individual Deaths -->
-            <section class="story-section" data-step="6">
-                <div class="story-text">
-                    <p class="story-paragraph large">
-                        Each circle represents thousands, even millions.
-                    </p>
-                    <p class="story-paragraph">
-                        Watch as they break apart...
-                    </p>
-                    <p class="story-paragraph large">
-                        Each small dot: one human life.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Act 8: Split into Military/Civilian -->
-            <section class="story-section" data-step="7">
-                <div class="story-text">
-                    <p class="story-paragraph">
-                        But who were these victims?
-                    </p>
-                    <p class="story-paragraph large">
-                        <span style="color: #27ae60;">●</span> Military casualties
-                        <br/>
-                        <span style="color: #f39c12;">●</span> Civilian casualties
-                    </p>
-                    <p class="story-paragraph">
-                        Watch as each conflict splits into soldiers and civilians.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Act 9: Drift Apart -->
-            <section class="story-section" data-step="8">
-                <div class="story-text">
-                    <p class="story-paragraph">
-                        At first, wars were fought by soldiers...
-                    </p>
-                </div>
-            </section>
-
-            <section class="story-section" data-step="9">
-                <div class="story-text">
-                    <p class="story-paragraph large">
-                        But something changed.
-                    </p>
-                    <p class="story-paragraph">
-                        In ancient wars: <strong>90% military</strong>, 10% civilian
-                        <br/>
-                        World War I: <strong>50/50</strong>
-                        <br/>
-                        Modern conflicts: <strong>10% military, 90% civilian</strong>
-                    </p>
-                </div>
-            </section>
-
-            <!-- Act 10: The Truth -->
-            <section class="story-section" data-step="10">
-                <div class="story-text">
-                    <p class="story-paragraph large">
-                        Today, civilians are the majority of victims.
-                    </p>
-                    <p class="story-paragraph">
-                        These are teachers, farmers, children.
-                        <br/>
-                        They didn't choose war.
-                        <br/>
-                        <strong>War chose them.</strong>
-                    </p>
-                </div>
-            </section>
-
-            <!-- Act 11: Conclusion -->
-            <section class="story-section" data-step="11">
-                <div class="story-text">
-                    <h2 class="story-title">The Cost We Cannot Ignore</h2>
-                    <p class="story-paragraph">
-                        While wars may be fought by armies, their impact extends far beyond the battlefield.
-                    </p>
-                    <p class="story-paragraph large">
-                        The past cannot be changed.
-                        <br/>
-                        But we can choose to remember—and to learn.
-                    </p>
-                    <a href="explore.html" class="explore-button">Explore The Full Data</a>
-                </div>
-            </section>
-
-        </div>
-    </div>
+                <div class="scroll-indicator">↓ Scroll to explore</div>
+            </div>
+        </section>
 
         <!-- Timeline Visualization - Full Overview -->
         <section id="timeline" class="section">
@@ -346,10 +203,17 @@
                 </div>
                 <button id="reset-btn" class="reset-button">Reset All Filters</button>
             </div>
-        </div>
+        </section>
     </div>
 
-    <!-- Load the story visualization -->
-    <script src="src/story.js"></script>
+    <!-- Load visualization scripts -->
+    <script src="src/data-loader.js"></script>
+    <script src="src/filters.js"></script>
+    <script src="visualizations/timeline-enhanced.js"></script>
+    <script src="visualizations/map.js"></script>
+    <script src="visualizations/area-chart.js"></script>
+    <script src="visualizations/sankey.js"></script>
+    <script src="visualizations/bar-chart.js"></script>
+    <script src="src/main.js"></script>
 </body>
 </html>
